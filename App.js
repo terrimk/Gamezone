@@ -7,6 +7,7 @@ Date started: 1-5-2021
 For the love of my life
 */
 
+import 'react-native-gesture-handler';
 import React, {useState} from 'react';
 import {StyleSheet, View, Text} from 'react-native';
 // import * as Font from 'expo-font';
@@ -41,7 +42,7 @@ export default function App() {
 //     )
 // }
   return(
-    <Home />
+    <Navigator />
   )
 }
 

@@ -1,7 +1,16 @@
-import { createStackNavigator } from 'react-navigation-stack';
-// createAppContainer was react-navigation version 4
-// import { createAppContainer } from 'react-navigation';
+/*  
+App Name: GameZone
+Purpose: user can interact with game reviews; practice new features learned about React Native
+File: homestack.js - Contains Navigation stack information, migrating to React Navigation version 5
+Reference: Net Ninja YouTube channel, "React Native Tutorial"
+Date started: 1-5-2021
+For the love of my life
+*/
+
+// VER 4: import { createStackNavigator } from 'react-navigation-stack';
+// VER 4: import { createAppContainer } from 'react-navigation';
 // NavigationContainer is react-navigation ver5 - replaces createAppContainer
+import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import Home from '../screens/home';
 import ReviewDetails from '../screens/reviewDetails';
@@ -27,12 +36,11 @@ import ReviewDetails from '../screens/reviewDetails';
 // const HomeStack = createStackNavigator(screens);
 
 // function to pass info about stack to App.js. Stack is ordered top to bottom.
-// createAppContainer is from react navigation version 4
 // export default createAppContainer(HomeStack);
 
 // VER 5
 
-const Stack = createStackNavigator();
+const HomeStack = createStackNavigator();
 
 function RootStack() {
   return (
@@ -53,6 +61,15 @@ function RootStack() {
     </Stack.Navigator>
   );
 }
-export default function App() {
-    return <NavigationContainer>{(HomeStack)}</NavigationContainer>;
-  };
+
+export default function newNav(RootStack) {
+    return (
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={Home} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    );
+  }
+  
+ 
