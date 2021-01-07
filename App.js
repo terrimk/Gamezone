@@ -14,6 +14,9 @@ import {StyleSheet, View, Text} from 'react-native';
 import Home from './screens/home';
 import About from './screens/about';
 import ReviewDetails from './screens/reviewDetails';
+// "Navigator" title here can be any word we want because we are importing the default function from homestack.js. 
+//   "Navigator" just makes logical sense in this case.
+import Navigator from './routes/homestack';
 
 // const getFonts = () => Font.loadAsync({
 //     'raleway-regular': require('./assets/fonts/Raleway-Regular.ttf'),
