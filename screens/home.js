@@ -15,9 +15,7 @@ export default function Home({ navigation }) {
 
     // VER 4:
     const pressHandler = () => {
-        console.log("pressed");
-        //navigation.navigate('ReviewDetails');
-        
+        navigation.navigate('ReviewDetails');
     }
 
     return(
