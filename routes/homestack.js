@@ -38,37 +38,19 @@ import ReviewDetails from '../screens/reviewDetails';
 // function to pass info about stack to App.js. Stack is ordered top to bottom.
 // export default createAppContainer(HomeStack);
 
+
 // VER 5
 
 const HomeStack = createStackNavigator();
 
-function RootStack() {
-  return (
-    <Stack.Navigator
-      initialRouteName="Home"
-      screenOptions={{ gestureEnabled: false }}
-    >
-      <Stack.Screen
-        name="Home"
-        component={Home}
-        options={{ title: 'GAMEZONE' }}
-      />
-      <Stack.Screen
-        name="Review Details"
-        component={ReviewDetails}
-        options={{ title: 'REVIEW DETAILS' }}
-      />
-    </Stack.Navigator>
-  );
-}
-
-export default function newNav(RootStack) {
+export default function myNavigation (HomeStack) {
     return (
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="Home" component={Home} />
-        </Stack.Navigator>
-      </NavigationContainer>
+    <NavigationContainer>
+        <HomeStack.Navigator initialRouteName="Home">
+          <HomeStack.Screen name="Home" component={Home} />
+          <HomeStack.Screen name="ReviewDetails" component={DetailsScreen} />
+        </HomeStack.Navigator>
+    </NavigationContainer>
     );
   }
   

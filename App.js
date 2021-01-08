@@ -18,6 +18,8 @@ import ReviewDetails from './screens/reviewDetails';
 // "Navigator" title here can be any word we want because we are importing the default function from homestack.js. 
 //   "Navigator" just makes logical sense in this case.
 import Navigator from './routes/homestack';
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
 
 // const getFonts = () => Font.loadAsync({
 //     'raleway-regular': require('./assets/fonts/Raleway-Regular.ttf'),
@@ -27,24 +29,11 @@ import Navigator from './routes/homestack';
 
 
 export default function App() {
-//   const [fontsLoaded, setFontsLoaded] = useState(false);
-
-//   if(fontsLoaded){
-//     return(
-//       <Home />
-//     );
-//  } else {
-//     return(
-//     <AppLoading
-//       startAsync={getFonts}
-//       onFinish={() => setFontsLoaded(true)}
-//     />
-//     )
-// }
   return(
     <Navigator />
-  )
+  );
 }
+
 
 const styles = StyleSheet.create({
   container: {
