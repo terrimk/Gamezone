@@ -13,7 +13,8 @@ import { globalStyles } from './styles/global';
 
 export default function Home({ navigation }) {
 
-    // VER 4:
+    // VER 4 and 5:
+    // Every component defined in stack navigator gets the navigation prop by default.
     const pressHandler = () => {
         navigation.navigate('ReviewDetails');
     }

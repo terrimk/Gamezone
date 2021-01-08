@@ -8,15 +8,22 @@ For the love of my life
 */
 
 import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, View, Text, Button} from 'react-native';
 import { globalStyles } from './styles/global';
 
-export default function ReviewDetails() {
-return(
-    <View style={globalStyles.container}>
-        <Text>Review Details Screen</Text>
-    </View>
+export default function ReviewDetails({ navigation }) {
 
-)
+    // VER 4 and 5:
+    // Every component defined in stack navigator gets the navigation prop by default.
+    const pressHandler = () => {
+        navigation.goBack();
+    }
+
+    return(
+        <View style={globalStyles.container}>
+            <Text>Review Details Screen</Text>
+            <Button title='back to home screen' onPress={pressHandler}/>
+        </View>
+    )
 }
 
