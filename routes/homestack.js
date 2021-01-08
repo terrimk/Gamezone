@@ -10,6 +10,7 @@ For the love of my life
 // VER 4: import { createStackNavigator } from 'react-navigation-stack';
 // VER 4: import { createAppContainer } from 'react-navigation';
 // NavigationContainer is react-navigation ver5 - replaces createAppContainer
+import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import Home from '../screens/home';
@@ -43,12 +44,12 @@ import ReviewDetails from '../screens/reviewDetails';
 
 const HomeStack = createStackNavigator();
 
-export default function myNavigation (HomeStack) {
+export default function Navigator () {
     return (
     <NavigationContainer>
         <HomeStack.Navigator initialRouteName="Home">
           <HomeStack.Screen name="Home" component={Home} />
-          <HomeStack.Screen name="ReviewDetails" component={DetailsScreen} />
+          <HomeStack.Screen name="ReviewDetails" component={ReviewDetails} />
         </HomeStack.Navigator>
     </NavigationContainer>
     );
