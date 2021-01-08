@@ -13,7 +13,7 @@ import { globalStyles } from './styles/global';
 
 export default function ReviewDetails({ navigation }) {
 
-    // VER 4 and 5:
+    // VER 4 and 5 :
     // Every component defined in stack navigator gets the navigation prop by default.
     const pressHandler = () => {
         navigation.goBack();
