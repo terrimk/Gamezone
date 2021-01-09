@@ -16,6 +16,7 @@ export default function Home({ navigation }) {
     // VER 4 and 5:
     // Every component defined in stack navigator gets the navigation prop by default.
     //pressHandler function used for action when button is pressed by user.
+    //updated branch default
     const pressHandler = () => {
         navigation.navigate('ReviewDetails');
     }
