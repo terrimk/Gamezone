@@ -7,18 +7,25 @@ Date started: 1-5-2021
 For the love of my life
 */
 
-import React from 'react';
-import {StyleSheet, View, Text, Button} from 'react-native';
+import React , { useState } from 'react';
+import { StyleSheet, View, Text, Button } from 'react-native';
 import { globalStyles } from './styles/global';
 
 export default function Home({ navigation }) {
 
     // VER 4 and 5:
     // Every component defined in stack navigator gets the navigation prop by default.
+    //pressHandler function used for action when button is pressed by user.
     const pressHandler = () => {
         navigation.navigate('ReviewDetails');
     }
 
+    const [reviews, setReviews] = useState([
+        { title: 'Zelda, Breath of Fresh Air', rating: 5, body: 'lorem ipsum', key: '1'},
+        { title: 'Gotta Catch Them All (again)', rating: 4, body: 'lorem ipsum', key: '2'},
+        { title: 'Not So "Final" Fantasy', rating: 2, body: 'lorem ipsum', key: '3'},
+    ]);
+    
     return(
         <View style={globalStyles.container}>
             <Text style={globalStyles.titleText}>Home Screen</Text>
