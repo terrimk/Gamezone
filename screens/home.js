@@ -8,7 +8,7 @@ For the love of my life
 */
 
 import React , { useState } from 'react';
-import { StyleSheet, View, Text, Button } from 'react-native';
+import { StyleSheet, View, Text, Button, FlatList, TouchableOpacity } from 'react-native';
 import { globalStyles } from './styles/global';
 
 export default function Home({ navigation }) {
@@ -29,8 +29,18 @@ export default function Home({ navigation }) {
     
     return(
         <View style={globalStyles.container}>
+        {/* First practice with navigation. No longer needed in App but code left for learning purposes.
             <Text style={globalStyles.titleText}>Home Screen</Text>
-            <Button title='go to review details page' onPress={pressHandler}/>
+            <Button title='go to review details page' onPress={pressHandler}/>   */}
+
+            <FlatList 
+                data={reviews}
+                renderItem={({ item }) => (
+                    <TouchableOpacity onPress={() => navigation.navigate('ReviewDetails', item)}>
+                        <Text style={globalStyles.titleText}>{ item.title }</Text>
+                    </TouchableOpacity>
+                )}
+            />
         </View>
     )
 }
