@@ -19,6 +19,7 @@ import Navigator from './routes/homestack';
 
 export default function App() {
   return(
+    //Stack Navigator that has been migrated from React Navigation version 4 to version 5
     <Navigator />
   );
 }
