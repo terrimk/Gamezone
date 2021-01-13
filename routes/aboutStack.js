@@ -46,12 +46,12 @@ export default AboutStack;
 
 // VER 5
 
-const HomeStack = createStackNavigator();
+const AboutStack = createStackNavigator();
 
 export default function Navigator () {
     return (
-    <NavigationContainer>
-        <HomeStack.Navigator 
+    <NavigationContainer independent={true}>
+        <AboutStack.Navigator 
             initialRouteName="Home"
             screenOptions={{
               headerStyle: {
@@ -62,9 +62,8 @@ export default function Navigator () {
                 fontWeight: 'bold',
               },
             }} >
-                <HomeStack.Screen name="GameZone" component={Home} />
-                <HomeStack.Screen name="ReviewDetails" component={ReviewDetails} />
-        </HomeStack.Navigator>
+                <AboutStack.Screen name="About" component={About} />
+        </AboutStack.Navigator>
     </NavigationContainer>
     );
   }

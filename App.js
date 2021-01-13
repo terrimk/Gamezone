@@ -15,11 +15,11 @@ import About from './screens/about';
 import ReviewDetails from './screens/reviewDetails';
 // "Navigator" title here can be any word we want because we are importing the default function from homestack.js. 
 //   "Navigator" just makes logical sense in this case.
-import Navigator from './routes/homestack';
+import Navigator from './routes/drawer';
 
 export default function App() {
   return(
-    //Stack Navigator that has been migrated from React Navigation version 4 to version 5
+    //Drawer Navigator that has been migrated from React Navigation version 4 to version 5
     <Navigator />
   );
 }
