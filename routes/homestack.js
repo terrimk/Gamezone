@@ -57,9 +57,9 @@ export default createAppContainer(HomeStack);
 
 const HomeStack = createStackNavigator();
 
-export default function Navigator () {
+export default function Nav () {
     return (
-    <NavigationContainer independent={true}>
+    <NavigationContainer>
         <HomeStack.Navigator 
             initialRouteName="Home"
             screenOptions={{

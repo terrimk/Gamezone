@@ -50,7 +50,7 @@ const AboutStack = createStackNavigator();
 
 export default function Navigator () {
     return (
-    <NavigationContainer independent={true}>
+    <NavigationContainer>
         <AboutStack.Navigator 
             initialRouteName="Home"
             screenOptions={{

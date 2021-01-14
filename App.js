@@ -17,6 +17,7 @@ import ReviewDetails from './screens/reviewDetails';
 //   "Navigator" just makes logical sense in this case.
 import Navigator from './routes/drawer';
 
+
 export default function App() {
   return(
     //Drawer Navigator that has been migrated from React Navigation version 4 to version 5
@@ -30,3 +31,4 @@ const styles = StyleSheet.create({
       padding: 24
   }
 });
+
