@@ -57,9 +57,8 @@ export default createAppContainer(HomeStack);
 
 const HomeStack = createStackNavigator();
 
-export default function Nav () {
+export default function homeNav () {
     return (
-    <NavigationContainer>
         <HomeStack.Navigator 
             initialRouteName="Home"
             screenOptions={{
@@ -74,7 +73,6 @@ export default function Nav () {
                 <HomeStack.Screen name="GameZone" component={Home} />
                 <HomeStack.Screen name="ReviewDetails" component={ReviewDetails} />
         </HomeStack.Navigator>
-    </NavigationContainer>
     );
   }
   

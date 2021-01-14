@@ -48,9 +48,8 @@ export default AboutStack;
 
 const AboutStack = createStackNavigator();
 
-export default function Navigator () {
+export default function aboutNav () {
     return (
-    <NavigationContainer>
         <AboutStack.Navigator 
             initialRouteName="Home"
             screenOptions={{
@@ -64,7 +63,6 @@ export default function Navigator () {
             }} >
                 <AboutStack.Screen name="About" component={About} />
         </AboutStack.Navigator>
-    </NavigationContainer>
     );
   }
   
