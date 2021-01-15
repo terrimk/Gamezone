@@ -10,6 +10,7 @@ For the love of my life
 // VER 4: import { createStackNavigator } from 'react-navigation-stack';
 // VER 4: import { createAppContainer } from 'react-navigation';
 // NavigationContainer is react-navigation ver5 - replaces createAppContainer
+import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import About from '../screens/about';
 
