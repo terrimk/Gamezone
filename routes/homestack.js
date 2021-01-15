@@ -57,7 +57,7 @@ export default createAppContainer(HomeStack);
 
 const HomeStack = createStackNavigator();
 
-export default function homeNav () {
+export default function Navigator () {
     return (
         <HomeStack.Navigator 
             initialRouteName="Home"
@@ -75,5 +75,4 @@ export default function homeNav () {
         </HomeStack.Navigator>
     );
   }
-  
- 
+   
