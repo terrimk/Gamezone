@@ -9,13 +9,13 @@ For the love of my life
 
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import { MaterialIcons } from '@expo/vector-icons';
+// import { MaterialIcons } from '@expo/vector-icons';
 
 export default function Header(){
     return(
         <View style={styles.header}>
         {/*icon here*/}
-            <View style ={styles.headerText}>GameZone</View>
+            <View style ={styles.headerText}><Text>My GameZone</Text></View>
         </View>
     )
 }
