@@ -10,6 +10,7 @@ For the love of my life
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 // import { MaterialIcons } from '@expo/vector-icons';
+import { Icon } from 'react-native-elements';
 
 export default function Header(){
     return(
