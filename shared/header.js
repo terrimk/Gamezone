@@ -15,7 +15,9 @@ export default function Header(){
     return(
         <View style={styles.header}>
         {/*icon here*/}
-            <View style ={styles.headerText}><Text>My GameZone</Text></View>
+            <View style ={styles.headerText}>
+                <Text>My GameZone</Text>
+            </View>
         </View>
     )
 }
@@ -28,10 +30,11 @@ const styles = StyleSheet.create({
         flexDirection: 'row',  // left to right orientation
         alignItems: 'center',  // works in cross axis direction, in this case will be centered vertically
         justifyContent: 'center', // works in axis direction, in this case will be centered horizontally
+        //backgroundColor: '#f4511e',
     },
     headerText:{
         fontWeight: 'bold',
-        fontSize: 20,
+        fontSize: 40,
         color: '#333',
         letterSpacing: 1,
     }

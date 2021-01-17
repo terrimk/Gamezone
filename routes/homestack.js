@@ -64,7 +64,9 @@ export default function Navigator () {
         <HomeStack.Navigator 
             initialRouteName="Home"
             screenOptions={{
+              headerTitle:() => <Header />, // use custom component for header
               headerStyle: {
+                height: 50,
                 backgroundColor: '#f4511e',
               },
               headerTintColor: '#fff',
@@ -75,7 +77,7 @@ export default function Navigator () {
                 <HomeStack.Screen 
                     name="GameZone" 
                     component={Home} 
-                    options={{ headerTitle: () => <Header /> }} 
+                   // options={{ headerTitle: () => <Header /> }} // use custom component for header
                 />
                 <HomeStack.Screen 
                     name="ReviewDetails" 

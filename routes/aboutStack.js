@@ -13,6 +13,7 @@ For the love of my life
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import About from '../screens/about';
+import Header from '../shared/header';
 
 /*VER 4
 // screens is an object variable that stores objects that point to the various screen files.
@@ -53,7 +54,8 @@ export default function aboutNav () {
     return (
         <AboutStack.Navigator 
             initialRouteName="Home"
-            screenOptions={{
+              screenOptions={{
+                headerTitle:() => <Header />, // use custom component for header
               headerStyle: {
                 backgroundColor: '#f4511e',
               },
@@ -61,7 +63,8 @@ export default function aboutNav () {
               headerTitleStyle: {
                 fontWeight: 'bold',
               },
-            }} >
+              }} 
+          >
                 <AboutStack.Screen name="About" component={About} />
         </AboutStack.Navigator>
     );
