@@ -7,18 +7,24 @@ Date started: 1-5-2021
 For the love of my life
 */
 
+import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 // import { MaterialIcons } from '@expo/vector-icons';
 import { Icon } from 'react-native-elements';
 
 export default function Header(){
+
+    const openMenu = () => {
+        //navigation.openDrawer()
+    }
+
     return(
         <View style={styles.header}>
-        {/*icon here*/}
-            <View style ={styles.headerText}>
-                <Text>My GameZone</Text>
-            </View>
+            <Icon name='menu' size={28} onPress={openMenu} style={styles.icon} />
+                <View style ={styles.headerText}>
+                    <Text>My GameZone</Text>
+                </View>
         </View>
     )
 }
@@ -38,5 +44,9 @@ const styles = StyleSheet.create({
         fontSize: 40,
         color: '#333',
         letterSpacing: 1,
+    },
+    icon: {
+        position: 'absolute',
+        left: 6,
     }
 })
