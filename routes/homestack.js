@@ -66,7 +66,7 @@ export default function Navigator () {
             screenOptions={{
               headerTitle:() => <Header />, // use custom component for header
               headerStyle: {
-                height: 50,
+                height: 100,
                 backgroundColor: '#f4511e',
               },
               headerTintColor: '#fff',

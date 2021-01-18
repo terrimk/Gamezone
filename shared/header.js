@@ -21,7 +21,7 @@ export default function Header(){
 
     return(
         <View style={styles.header}>
-            <Icon name='menu' size={28} onPress={openMenu} style={styles.icon} />
+            <Icon name='menu' onPress={openMenu} style={styles.icon} />
                 <View style ={styles.headerText}>
                     <Text>My GameZone</Text>
                 </View>
