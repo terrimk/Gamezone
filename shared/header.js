@@ -13,7 +13,7 @@ import { StyleSheet, View, Text } from 'react-native';
 // import { MaterialIcons } from '@expo/vector-icons';
 import { Icon } from 'react-native-elements';
 
-export default function Header({ navigation }){
+export default function Header({ navigation, title }){
 
     const openMenu = () => {
         navigation.openDrawer();
@@ -24,8 +24,9 @@ export default function Header({ navigation }){
             <View style={styles.icon}>
                 <Icon name='menu' size= {28} onPress={openMenu}  />
             </View>
-            <View style ={styles.headerText}>
-                <Text>My GameZone</Text>
+            <View>
+                {/*title is added dynamically depending on page, i.e. Home or About  */}
+                <Text style ={styles.headerText}>{ title }</Text>  
             </View>
         </View>
     )
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
     },
     headerText:{
         fontWeight: 'bold',
-        fontSize: 40,
+        fontSize: 20,
         color: '#333',
         letterSpacing: 1,
     },

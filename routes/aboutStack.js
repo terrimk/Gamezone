@@ -57,7 +57,7 @@ export default function aboutNav () {
               screenOptions={{
               //  headerTitle:() => <Header />, // use custom component for header
               headerStyle: {
-                backgroundColor: '#f4511e',
+                backgroundColor: 'pink',
               },
               headerTintColor: '#fff',
               headerTitleStyle: {
@@ -68,9 +68,10 @@ export default function aboutNav () {
                 <AboutStack.Screen 
                     name="About" 
                     component={About} 
+                    //use custom component for header, pass in navigation and title for about page
                     options= {({ navigation }) => {
                         return {
-                          headerTitle: () => <Header navigation={navigation} />,
+                          headerTitle: () => <Header navigation={navigation} title='About GameZone' />,
                         }
                     }}  
                 />

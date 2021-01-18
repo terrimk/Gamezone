@@ -67,7 +67,7 @@ export default function Navigator () {
               //headerTitle:() => <Header />, // if placed here, also shows on Review Details page
               headerStyle: {
                 height: 50,
-                backgroundColor: '#f4511e',
+                backgroundColor: 'pink',
               },
               headerTintColor: '#fff',
               headerTitleStyle: {
@@ -77,10 +77,10 @@ export default function Navigator () {
                 <HomeStack.Screen 
                     name="GameZone" 
                     component={Home} 
-                    //use custom component for header, pass in navigation
+                    //use custom component for header, pass in navigation and title for homepage
                     options= {({ navigation }) => {
                         return {
-                          headerTitle: () => <Header navigation={navigation} />,
+                          headerTitle: () => <Header navigation={navigation} title='The GameZone' />,
                         }
                     }}
                 />
