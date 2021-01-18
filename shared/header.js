@@ -13,10 +13,10 @@ import { StyleSheet, View, Text } from 'react-native';
 // import { MaterialIcons } from '@expo/vector-icons';
 import { Icon } from 'react-native-elements';
 
-export default function Header(){
+export default function Header({ navigation }){
 
     const openMenu = () => {
-        //navigation.openDrawer()
+        navigation.openDrawer();
     }
 
     return(

@@ -55,7 +55,7 @@ export default function aboutNav () {
         <AboutStack.Navigator 
             initialRouteName="Home"
               screenOptions={{
-                headerTitle:() => <Header />, // use custom component for header
+              //  headerTitle:() => <Header />, // use custom component for header
               headerStyle: {
                 backgroundColor: '#f4511e',
               },
@@ -65,7 +65,15 @@ export default function aboutNav () {
               },
               }} 
           >
-                <AboutStack.Screen name="About" component={About} />
+                <AboutStack.Screen 
+                    name="About" 
+                    component={About} 
+                    options= {({ navigation }) => {
+                        return {
+                          headerTitle: () => <Header navigation={navigation} />,
+                        }
+                    }}  
+                />
         </AboutStack.Navigator>
     );
   }
