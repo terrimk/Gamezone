@@ -10,6 +10,7 @@ For the love of my life
 import React from 'react';
 import {StyleSheet, View, Text, Button} from 'react-native';
 import { globalStyles } from './styles/global';
+import Card from '../shared/card';
 
 export default function ReviewDetails({ route, navigation }) {
 
@@ -21,15 +22,16 @@ export default function ReviewDetails({ route, navigation }) {
 
     return(
         <View style={globalStyles.container}>
-            <Text>Review Details Screen</Text>
-        {/* First practice with navigation. No longer needed in App but code left for learning purposes.
+              {/* First practice with navigation. No longer needed in App but code left for learning purposes.
             <Button title='back to home screen' onPress={pressHandler}/> */ }
         {/* VER 4:}
             <Text>{ navigation.getParam('title') }</Text>  */}
         {/* VER 5: */}
-            <Text style={globalStyles.container}>{ route.params.title }</Text>  
-            <Text style={globalStyles.container}>{ route.params.body }</Text>
-            <Text style={globalStyles.container}>{ route.params.rating }</Text>
+            <Card>
+                <Text> { route.params.title } </Text>  
+                <Text> { route.params.body } </Text>
+                <Text> { route.params.rating } </Text>
+            </Card>
         </View>
     )
 }

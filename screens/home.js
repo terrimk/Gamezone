@@ -10,6 +10,7 @@ For the love of my life
 import React , { useState } from 'react';
 import { StyleSheet, View, Text, Button, FlatList, TouchableOpacity } from 'react-native';
 import { globalStyles } from './styles/global';
+import Card from '../shared/card';
 
 export default function Home({ navigation }) {
 
@@ -37,7 +38,9 @@ export default function Home({ navigation }) {
                 data={reviews}
                 renderItem={({ item }) => (
                     <TouchableOpacity onPress={() => navigation.navigate('ReviewDetails', item)}>
-                        <Text style={globalStyles.titleText}>{ item.title }</Text>
+                        <Card>
+                            <Text style={globalStyles.titleText}>{ item.title }</Text>
+                        </Card>
                     </TouchableOpacity>
                 )}
             />
