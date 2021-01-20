@@ -9,7 +9,7 @@ For the love of my life
 
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, Image, ImageBackground } from 'react-native';
 // import { MaterialIcons } from '@expo/vector-icons';
 import { Icon } from 'react-native-elements';
 
@@ -20,15 +20,16 @@ export default function Header({ navigation, title }){
     }
 
     return(
-        <View style={styles.header}>
+        <ImageBackground source={require('../assets/game_bg.png')} style={styles.header}>
             <View style={styles.icon}>
                 <Icon name='menu' size= {28} onPress={openMenu}  />
             </View>
-            <View>
+            <View style={styles.headerTitle}>
+                <Image source={require('../assets/heart_logo.png')} style={styles.headerImage}></Image>
                 {/*title is added dynamically depending on page, i.e. Home or About  */}
                 <Text style ={styles.headerText}>{ title }</Text>  
             </View>
-        </View>
+        </ImageBackground>
     )
 }
 
@@ -51,5 +52,13 @@ const styles = StyleSheet.create({
     icon: {
         position: 'absolute',
         left: 6,
+    },
+    headerImage:{
+        width: 26,
+        height: 26,
+        marginHorizontal: 10,
+    },
+    headerTitle:{
+        flexDirection: 'row',
     }
 })
