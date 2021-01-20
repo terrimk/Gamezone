@@ -20,7 +20,8 @@ export default function ReviewDetails({ route, navigation }) {
         navigation.goBack();
     }
 
-    const rating = navigation.getParam('rating');
+    //const rating = { route.params.rating };
+    //const route = useRoute();
 
     return(
         <View style={globalStyles.container}>
@@ -34,7 +35,7 @@ export default function ReviewDetails({ route, navigation }) {
                 <Text> { route.params.body } </Text>
                 <View style={styles.rating}>
                     <Text>GameZone rating:</Text>
-                        <Image source={images.ratings[rating]} />
+                        <Image source={require('../assets/rating-1.png')} />
                 </View>
             </Card>
         </View>
