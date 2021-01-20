@@ -9,7 +9,7 @@ For the love of my life
 
 import React , { useState } from 'react';
 import { StyleSheet, View, Text, Button, FlatList, TouchableOpacity } from 'react-native';
-import { globalStyles } from './styles/global';
+import { globalStyles } from '../styles/global';
 import Card from '../shared/card';
 
 export default function Home({ navigation }) {

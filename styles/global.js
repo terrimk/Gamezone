@@ -24,6 +24,7 @@ export const globalStyles = StyleSheet.create({
     }
 });
 
+// Images to show rating value as hearts
 export const images = {
     ratings: {
         '1': require('../assets/rating-1.png'),
