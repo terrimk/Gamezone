@@ -12,6 +12,7 @@ import { StyleSheet, View, Text, Button, FlatList, TouchableOpacity, Modal } fro
 import { globalStyles } from '../styles/global';
 import Card from '../shared/card';
 import { Icon } from 'react-native-elements';
+import ReviewForm from './reviewForm';
 
 export default function Home({ navigation }) {
 
@@ -47,7 +48,7 @@ export default function Home({ navigation }) {
                         onPress={() => setModalOpen(false)}
                     />
             </View>
-                    <Text>Hello from the modal :)</Text>
+                    <ReviewForm />
                 </View>
             </Modal>
             
