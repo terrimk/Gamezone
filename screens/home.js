@@ -31,6 +31,14 @@ export default function Home({ navigation }) {
         { title: 'Gotta Catch Them All (again)', rating: 3, body: 'lorem ipsum', key: '2'},
         { title: 'Not So "Final" Fantasy', rating: 2, body: 'lorem ipsum', key: '3'},
     ]);
+
+    const addReview = (review) => {
+        review.key = Math.random().toString();
+        setReviews((currentReviews) => {
+            return[review, ...currentReviews];
+        })
+        setModalOpen(false);
+    };
     
     return(
         <View style={globalStyles.container}>
@@ -48,7 +56,7 @@ export default function Home({ navigation }) {
                         onPress={() => setModalOpen(false)}
                     />
             </View>
-                    <ReviewForm />
+                    <ReviewForm addReview={addReview}/>
                 </View>
             </Modal>
             
