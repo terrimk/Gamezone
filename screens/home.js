@@ -8,7 +8,8 @@ For the love of my life
 */
 
 import React , { useState } from 'react';
-import { StyleSheet, View, Text, Button, FlatList, TouchableOpacity, Modal } from 'react-native';
+import { StyleSheet, View, Text, Button, FlatList, TouchableOpacity, Modal,
+            TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { globalStyles } from '../styles/global';
 import Card from '../shared/card';
 import { Icon } from 'react-native-elements';
@@ -47,17 +48,19 @@ export default function Home({ navigation }) {
             <Button title='go to review details page' onPress={pressHandler}/>   */}
             
             <Modal visible={modalOpen} animationType='slide'>
-                <View style={styles.modalContent}>
-                    <View>
-                    <Icon
-                        name= 'close'
-                        size= {24}
-                        style={{ ...styles.modalToggle, ...styles.modalClose }}
-                        onPress={() => setModalOpen(false)}
-                    />
-            </View>
-                    <ReviewForm addReview={addReview}/>
-                </View>
+                <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+                    <View style={styles.modalContent}>
+                        <View>
+                        <Icon
+                            name= 'close'
+                            size= {24}
+                            style={{ ...styles.modalToggle, ...styles.modalClose }}
+                            onPress={() => setModalOpen(false)}
+                        />
+                         </View>
+                        <ReviewForm addReview={addReview}/>
+                    </View>
+                </TouchableWithoutFeedback>
             </Modal>
             
             <View>
