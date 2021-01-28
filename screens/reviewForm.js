@@ -47,14 +47,18 @@ export default function ReviewForm({ addReview }) {
                             placeholder='Review Title'
                             onChangeText={props.handleChange('title')}
                             value={props.values.title}
+                            onBlur={props.handleBlur('title')}  // realtime validation, will show error when user clicks away from field
                         />
+                        <Text style={globalStyles.errorText}>{ props.touched.title && props.errors.title }</Text>
 
                         <TextInput
                             style={globalStyles.input}
                             placeholder='Review Body'
                             onChangeText={props.handleChange('body')}
                             value={props.values.body}
+                            onBlur={props.handleBlur('body')}
                         />  
+                        <Text style={globalStyles.errorText}>{ props.touched.body && props.errors.body }</Text>
 
                         <TextInput
                             style={globalStyles.input}
@@ -62,7 +66,9 @@ export default function ReviewForm({ addReview }) {
                             onChangeText={props.handleChange('rating')}
                             value={props.values.rating}
                             keyboardType='numeric'
+                            onBlur={props.handleBlur('rating')}
                         />
+                        <Text style={globalStyles.errorText}>{ props.touched.rating && props.errors.rating }</Text>
                      
                         <Button title='submit' color='maroon' onPress={props.handleSubmit} />
                     </View>
