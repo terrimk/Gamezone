@@ -49,8 +49,14 @@ export default function ReviewForm({ addReview }) {
                             value={props.values.title}
                             onBlur={props.handleBlur('title')}  // realtime validation, will show error when user clicks away from field
                         />
-                        <Text>{ props.touched.title && props.errors.title }</Text>
+                        
+                        {/* For different way of adding more style to error message, see this link:
+                        https://heartbeat.fritz.ai/build-and-validate-forms-in-react-native-using-formik-and-yup-6489e2dff6a2 
+                        
+                        Adding style=globalStyles.errorText caused the app to crash*/}
 
+                        <Text style={{ color: 'red' }}>{ props.touched.title && props.errors.title }</Text> 
+                        
                         <TextInput
                             style={globalStyles.input}
                             placeholder='Review Body'
@@ -58,7 +64,7 @@ export default function ReviewForm({ addReview }) {
                             value={props.values.body}
                             onBlur={props.handleBlur('body')}
                         />  
-                         <Text>{ props.touched.body && props.errors.body }</Text>
+                         <Text style={{ color: 'red' }}>{ props.touched.body && props.errors.body }</Text>
 
                         <TextInput
                             style={globalStyles.input}
@@ -68,7 +74,7 @@ export default function ReviewForm({ addReview }) {
                             keyboardType='numeric'
                             onBlur={props.handleBlur('rating')}
                         />
-                        <Text>{ props.touched.rating && props.errors.rating }</Text>
+                        <Text style={{ color: 'red' }}>{ props.touched.rating && props.errors.rating }</Text>
                      
                         <Button title='submit' color='maroon' onPress={props.handleSubmit} />
                     </View>
