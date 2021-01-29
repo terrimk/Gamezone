@@ -51,14 +51,14 @@ export default function Home({ navigation }) {
                 <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
                     <View style={styles.modalContent}>
                         <View>
-                        <Icon
-                            name= 'close'
-                            size= {24}
-                            style={{ ...styles.modalToggle, ...styles.modalClose }}
-                            onPress={() => setModalOpen(false)}
-                        />
+                            <Icon
+                                name= 'close'
+                                size= {24}
+                                style={{ ...styles.modalToggle, ...styles.modalClose }}
+                                onPress={() => setModalOpen(false)}
+                            />
                          </View>
-                        <ReviewForm addReview={addReview}/>
+                        <ReviewForm addReview={addReview}/> 
                     </View>
                 </TouchableWithoutFeedback>
             </Modal>
