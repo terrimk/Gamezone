@@ -16,6 +16,11 @@ import ReviewDetails from './screens/reviewDetails';
 // "Navigator" title here can be any word we want because we are importing the default function from homestack.js. 
 //   "Navigator" just makes logical sense in this case.
 import Navigator from './routes/drawer';
+import * as Sentry from "@sentry/react-native";
+
+Sentry.init({
+  dsn: "https://fd1f795911204bebb5ee140c7d812acc@o512802.ingest.sentry.io/5613718",
+});
 
 
 export default function App() {
